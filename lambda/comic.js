@@ -1,7 +1,11 @@
 const got = require('got')
 
 exports.handler = async (event, context, callback) => {
-  const res = await got('https://xkcd.com/616/info.0.json', { json: true })
+  console.log('quack', event)
+  // TODO: Get query param (ID)
+  const id = 616
+  const res = await got(`https://xkcd.com/${id}/info.0.json`, { json: true })
+  console.log('got pkg response', res)
   const body = await res.body
 
   callback(null, {
