@@ -1,0 +1,5 @@
+[build]
+  functions = "./lambda"
+
+[build.environment]
+  NODE_VERSION = 11.1.0

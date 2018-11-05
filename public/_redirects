@@ -1,0 +1,7 @@
+/*    /   200
+
+# Redirect default Netlify subdomain to primary domain
+https://ajv-xkcd.netlify.com/* https://xkcd.andreasvirkus.me/:splat 301!
+
+# These extra rules are required because HTTPS is not forced
+http://ajv-xkcd.netlify.com/* https://xkcd.andreasvirkus.me/:splat 301!
