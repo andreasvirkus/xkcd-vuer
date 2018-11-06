@@ -37,6 +37,7 @@ A workaround: `decodeURIComponent(escape(transcript))`
 
 - Handle 404s both client-side (when our serverless returns a 404) and server-side (ie on weird routes or when
 the route structure doesn't match a digits-only regex / "about")
+- Add either [page transitions](https://markus.oberlehner.net/blog/vue-router-page-transitions/) or [UI skeletons](https://markus.oberlehner.net/blog/skeleton-loading-animation-with-vue/)
 
 
 ## Project setup
