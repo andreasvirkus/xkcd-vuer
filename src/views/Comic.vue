@@ -28,6 +28,8 @@ export default {
   computed: {
     comicDate () {
       const { year, month, day } = this.comic
+      if (!year || !month) return ''
+
       return new Dayjs(`${year}-${month}-${day}`).format('MMM D, \'YY')
     }
   }
