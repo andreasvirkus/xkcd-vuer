@@ -77,14 +77,13 @@ export default {
         if (!this.id) {
           this.$router.replace({ params: { id: body.num } })
           this.lastComic = body.num
-          this.isLast = true
         } else if (!this.lastComic) {
           const res = await fetch(`${host}/comic`, fetchOptions)
           const body = await res.json()
           this.lastComic = body.num
         }
 
-        if (this.id === this.lastComic) this.isLast = false
+        this.isLast = this.id === this.lastComic
 
         this.randomComic = Math.floor(Math.random() * Math.floor(this.lastComic))
       }
