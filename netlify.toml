@@ -1,5 +1,7 @@
 [build]
-  functions = "./dist-serverless"
+  command = "npm run build:dist"
+  publish = "dist"
+  functions = "dist-serverless"
 
 [[headers]]
   for = "/*"

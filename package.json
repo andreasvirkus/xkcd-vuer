@@ -7,12 +7,13 @@
     "serve:func": "netlify-lambda serve lambda",
     "build": "vue-cli-service build",
     "build:func": "netlify-lambda build lambda",
+    "build:dist": "npm run build && npm run build:func",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "got": "^9.3.1",
     "netlify-lambda": "^1.0.2",
+    "node-fetch": "^2.2.1",
     "register-service-worker": "^1.0.0",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1"
