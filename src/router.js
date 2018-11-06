@@ -16,7 +16,9 @@ export default new Router({
       path: '/:id?',
       name: 'comic',
       component: Comic,
-      props: true
+      props: route => ({
+        id: parseInt(route.params.id, 10)
+      })
     }
   ]
 })
