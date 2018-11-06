@@ -35,9 +35,6 @@ export default {
 </script>
 
 <style lang="scss">
-img {
-  max-width: 40rem;
-}
 pre {
   text-align: left;
   background-color: #f4f4f4;

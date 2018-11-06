@@ -105,7 +105,8 @@ export default {
   padding: 30px;
 }
 main {
-  max-width: 45rem;
+  max-width: 60rem;
+  width: 95%;
   margin: 0 auto;
   text-align: left;
 }
