@@ -27,7 +27,8 @@ export default {
   name: 'xkcd-app',
   data () {
     return {
-      lastComic: 0,
+      lastComic: 42,
+      randomComic: 42,
       isLast: false,
       comic: {}
     }
@@ -53,12 +54,10 @@ export default {
       }
     },
     randomLink () {
-      const random = Math.floor(Math.random() * Math.floor(this.lastComic))
-      console.log('random ticket', random)
       return {
         name: 'comic',
         params: {
-          id: !this.lastComic ? 42 : random
+          id: this.randomComic
         }
       }
     }
@@ -76,7 +75,7 @@ export default {
         this.comic = body
 
         if (!this.id) {
-          this.$router.push({ params: { id: body.num } })
+          this.$router.replace({ params: { id: body.num } })
           this.lastComic = body.num
           this.isLast = true
         } else if (!this.lastComic) {
@@ -86,6 +85,8 @@ export default {
         }
 
         if (this.id === this.lastComic) this.isLast = false
+
+        this.randomComic = Math.floor(Math.random() * Math.floor(this.lastComic))
       }
     }
   }
