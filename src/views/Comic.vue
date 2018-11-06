@@ -1,6 +1,6 @@
 <template>
   <main class="comic">
-    <h1>#{{ comic.num }} {{ comic.title }}</h1>
+    <h1><a :href="`https://xkcd.com/${comic.num}`">#{{ comic.num }} {{ comic.title }}</a></h1>
     <h2>{{ comicDate }}</h2>
     <img :src="comic.img"
       :alt="comic.alt"
