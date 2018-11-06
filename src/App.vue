@@ -12,6 +12,7 @@
       <router-link to="/about">about</router-link>
       <a href="https://andreasvirkus.me">author</a>
       <a href="https://github.com/andreasvirkus/xkcd-vuer">source</a>
+      <a href="https://xkcd.com">OG: xkcd</a>
     </footer>
   </div>
 </template>
