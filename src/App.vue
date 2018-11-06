@@ -9,7 +9,7 @@
     <router-view :comic="comic" />
 
     <footer>
-      <router-link v-if="!lastComic" to="/about">about</router-link>
+      <router-link to="/about">about</router-link>
       <a href="https://andreasvirkus.me">author</a>
       <a href="https://github.com/andreasvirkus/xkcd-vuer">source</a>
     </footer>
