@@ -1,4 +1,5 @@
 import fetch from 'node-fetch'
+import querystring from 'querystring'
 
 const fetchOptions = {
   headers: { 'Content-Type': 'application/json; charset=utf-8' },
@@ -11,8 +12,8 @@ exports.handler = async (event, context, callback) => {
   const res = await fetch(`https://xkcd.com${comic}/info.0.json`, fetchOptions)
   const body = await res.json()
 
-  body.transcript = decodeURIComponent(escape(body.transcript))
-  body.alt = decodeURIComponent(escape(body.alt))
+  body.transcript = querystring.decode(escape(body.transcript))
+  body.alt = querystring.decode(escape(body.alt))
 
   // if (!response.ok) {
   //   // TODO: Handle 404s and their various friends
