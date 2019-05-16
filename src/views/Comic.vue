@@ -7,7 +7,7 @@
       :title="comic.alt"
       :aria-label="comic.transcript"/>
 
-    <p>{{ comic.alt }}</p>
+    <p><em>{{ comic.alt }}</em></p>
 
     <details>
       <summary>Raw response:</summary>

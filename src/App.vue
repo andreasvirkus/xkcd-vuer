@@ -2,8 +2,8 @@
   <div id="app">
     <div id="nav">
       <router-link :to="lastLink">last</router-link>
-      <router-link v-if="!isLast" :to="nextLink">next</router-link>
       <router-link :to="randomLink">random</router-link>
+      <router-link v-if="!isLast" :to="nextLink">next</router-link>
     </div>
 
     <router-view :comic="comic" />
@@ -99,6 +99,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  margin-bottom: 5rem;
 }
 #nav {
   padding: 30px;
