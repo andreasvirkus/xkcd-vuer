@@ -12,6 +12,6 @@
     X-Content-Type-Options = "nosniff"
     Content-Security-Policy = '''
       default-src 'self';
-      script-src 'self' https: 'storage.googleapis.com';
-      img-src https: 'imgs.xkcd.com';
+      script-src 'self' https://storage.googleapis.com;
+      img-src 'self' https://imgs.xkcd.com;
       object-src 'none' '''
