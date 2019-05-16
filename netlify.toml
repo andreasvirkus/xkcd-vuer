@@ -12,5 +12,5 @@
     X-Content-Type-Options = "nosniff"
     Content-Security-Policy = '''
       default-src 'self';
-      script-src 'https://storage.googleapis.com/workbox-cdn/*';
+      script-src 'self' 'https://storage.googleapis.com/workbox-cdn/*';
       object-src 'none' '''
