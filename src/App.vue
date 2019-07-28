@@ -67,10 +67,9 @@ export default {
       immediate: true,
       async handler () {
         // TODO: handle 404-s
-        const onLocalhost = window.location.hostname === 'localhost'
-        const host = onLocalhost ? '' : '/.netlify/functions'
+        const path = '/.netlify/functions'
         const param = this.id ? `?id=${this.id}` : ''
-        const res = await fetch(`${host}/comic${param}`, fetchOptions)
+        const res = await fetch(`${path}/comic${param}`, fetchOptions)
         const body = await res.json()
         this.comic = body
 
@@ -78,7 +77,7 @@ export default {
           this.$router.replace({ params: { id: body.num } })
           this.lastComic = body.num
         } else if (!this.lastComic) {
-          const res = await fetch(`${host}/comic`, fetchOptions)
+          const res = await fetch(`${path}/comic`, fetchOptions)
           const body = await res.json()
           this.lastComic = body.num
         }
