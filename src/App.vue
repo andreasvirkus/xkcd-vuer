@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link :to="lastLink">last</router-link>
+      <router-link :to="lastLink">👈 prev</router-link>
       <router-link :to="randomLink">random</router-link>
-      <router-link v-if="!isLast" :to="nextLink">next</router-link>
+      <router-link v-if="!isLast" :to="nextLink">next 👉</router-link>
     </div>
 
     <router-view :comic="comic" />
